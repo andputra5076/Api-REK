@@ -1,0 +1,6 @@
+RewriteEngine On
+
+# Menghapus .php dari URL
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^api/([a-zA-Z0-9_-]+)$ api/index.php?action=$1 [L]
